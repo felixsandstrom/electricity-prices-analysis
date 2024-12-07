@@ -12,7 +12,7 @@ relative_path = "electricity_prices_norway_processed.csv"  # Replace with the ac
 file_path = os.path.join(script_dir, relative_path)
 
 # Read the CSV file
-df = pd.read_csv(file_path, encoding="utf-8")
+df = pd.read_csv(file_path, encoding="utf-8-sig")
 
 # Ensure the Date column is a datetime object
 df["Date"] = pd.to_datetime(df["Date"])
